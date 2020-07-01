@@ -1,0 +1,25 @@
+# COMO INSTALAR UM VERSÃO EXPECÍFICA NODE NO LINUX
+
+Primeiro, baixe o NVM usando wget. Execute:
+sudo apt install wget
+
+Em seguida utilize o comando:
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
+O próximo passo é permitir que o NVM seja utilizado do seu perfil de usuário bash com o comando:
+source ~/.profile
+
+Agora você pode usar o NVM para mostrar todas as versões do Node.js disponíveis para ser instaladas. Com o comando:
+nvm ls-remote
+
+Agora você pode escolher a versão que preferir. Execute:
+nvm install 10.15.1
+
+Verifique se a instalação ocorreu com sucesso:
+node -v
+
+Se você instalou o Node.js com este método mas agora deseja desinstalá-lo, primeiro é preciso desativar a aplicação:
+nvm deactivate
+
+Em seguida desinstale o Node.js:
+nvm uninstall v10.15.1
